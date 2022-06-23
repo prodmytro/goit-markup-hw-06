@@ -712,6 +712,10 @@ footer {
   margin-left: 10px;
 }
 
+.footer-btn-icon-send::before {
+  content: 'Подписаться';
+}
+
 /* modal window */
 
 .backdrop {
