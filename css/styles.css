@@ -848,7 +848,7 @@ footer {
 }
 
 .form-input:focus,
-.textarea:focus {
+.textarea-comment:focus {
   outline: transparent;
   border-color: var(--accent-color);
 }
@@ -891,7 +891,10 @@ footer {
   align-content: center;
 }
 
-.checkbox {
+.checkbox-icon {
+  appearance: none;
+  -webkit-appearance: none;
+
   display: inline;
   margin-right: 8px;
   border: 2px var(--second-text-color);
