@@ -411,26 +411,28 @@
           </div>
           <div class="footer-email-input">
             <h2 class="footer-socials-header">Подпишитесь на рассылку</h2>
-            <input
-              class="footer-email-input-field"
-              type="email"
-              name="email"
-              placeholder="E-mail"
-            />
-            <button type="submit" class="footer-sign-btn">
-              <!-- <div class="footer-sign-btn-text">
-                Подписаться -->
-              <svg width="24" height="24" class="footer-btn-icon-send">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
-              <!-- </div> -->
-            </button>
+            <form class="footer-form" action="footer-form">
+              <input
+                class="footer-email-input-field"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+              />
+              <div class="footer-form-btn">
+                <button type="submit" class="footer-sign-btn">
+                  Подписаться&nbsp
+                  <svg width="24" height="24" class="footer-btn-icon-send">
+                    <use href="./images/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </footer>
     <!-- modal window -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-icon" width="18" height="18">
@@ -439,22 +441,48 @@
         </button>
         <strong class="modal-header">Оставьте свои данные, мы вам перезвоним</strong>
         <div class="modal-inputs">
-          <form>
-            <div class="form-field">
-              <label class="form-label" for="username">Имя</label>
-              <input class="form-input" type="text" name="username" id="username" />
+          <form class="form">
+            <div class="form-main">
+              <div class="form-field">
+                <label class="form-label" for="username">Имя</label>
+                <input class="form-input" type="text" name="username" id="username" />
+                <svg class="modal-icon-field" width="18" height="18">
+                  <use href="./images/icons.svg#icon-person"></use>
+                </svg>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="phone">Телефон</label>
+                <input class="form-input" type="phone" name="phone" id="phone" />
+                <svg class="modal-icon-field" width="18" height="18">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="email">Почта</label>
+                <input class="form-input" type="email" name="email" id="email" />
+                <svg class="modal-icon-field" width="18" height="18">
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="comment">Комментарий</label>
+                <textarea
+                  class="textarea-comment"
+                  name="comment"
+                  id="comment"
+                  placeholder="Введите текст"
+                >
+                </textarea>
+              </div>
             </div>
-            <div class="form-field">
-              <label class="form-label" for="">Телефон</label>
-              <input class="form-input" type="phone" />
+            <div class="form-checkbox">
+              <input type="checkbox" name="" value="" id="" class="checkbox" />
+              <p class="checkbox-txt">
+                Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+              </p>
             </div>
-            <div class="form-field">
-              <label class="form-label" for="">Почта</label>
-              <input class="form-input" type="email" />
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="">Комментарий</label>
-              <textarea name="" id="" cols="30" rows="10" placeholder="Введите текст"></textarea>
+            <div class="form-submit">
+              <button type="submit" class="form-btn">Отправить</button>
             </div>
           </form>
         </div>
