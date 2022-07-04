@@ -891,21 +891,35 @@ footer {
   align-content: center;
 }
 
-.checkbox-icon {
+.checkbox {
   appearance: none;
   -webkit-appearance: none;
+}
 
-  display: inline;
-  margin-right: 8px;
-  border: 2px var(--second-text-color);
+.checkbox-icon {
+  display: inline-block;
+  border: 2px solid var(--second-text-color);
   border-radius: 4px;
+  width: 16px;
+  height: 15px;
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: #188ce8;
+  background-image: url('../images/checkbox-checked.svg');
+  background-size: contain;
+  background-origin: border-box;
+  border-color: transparent;
 }
 
 .checkbox-txt {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-
   letter-spacing: 0.03em;
 
   color: #757575;
